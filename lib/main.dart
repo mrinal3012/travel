@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:travel/Description/deccriptionmain_page.dart';
 import 'package:travel/Description/icon_page.dart';
+import 'package:travel/datastorhive/hive_page.dart';
 import 'package:travel/home/appsicon_page.dart';
 import 'package:travel/home/home_page.dart';
 import 'package:travel/moment/ravel_page.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive/hive.dart';
 
-void main() {
+Future <void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+
+  Box box = await Hive.openBox("counties-list");
+  box.put("name", "bangladesh");
+  print(box.get("name"));
   runApp(const MyApp());
 }
 
@@ -19,18 +28,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
+
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: HivePage(),
     );
   }
 }
