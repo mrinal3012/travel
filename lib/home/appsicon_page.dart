@@ -11,7 +11,7 @@ class AppsIconPage extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 25,
-            backgroundColor: Colors.blueGrey.withOpacity(0.2),
+            backgroundColor: Colors.blueGrey.withOpacity(0.1),
             child: Icon(
               Icons.menu,
               color: Colors.black,

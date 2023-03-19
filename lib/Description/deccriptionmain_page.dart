@@ -24,7 +24,7 @@ class _DescriptionMainPageState extends State<DescriptionMainPage> {
           itemCount: widget.cardList.length,
           itemBuilder: (context, index) => Container(
             height: double.infinity,
-            width: 100,
+            width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("${widget.cardList[index].image}"),
@@ -32,12 +32,12 @@ class _DescriptionMainPageState extends State<DescriptionMainPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 80, left: 20),
-                      child: CircleAvatar(
+                Padding(
+                  padding: EdgeInsets.only(top: 80, right: 20,left: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CircleAvatar(
                         radius: 18,
                         backgroundColor: Colors.white,
                         child: IconButton(
@@ -49,16 +49,13 @@ class _DescriptionMainPageState extends State<DescriptionMainPage> {
                             },
                             icon: Icon(Icons.arrow_back_ios,size:12,)),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 80, right: 20),
-                      child: Icon(
+                      Icon(
                         Icons.more_horiz_outlined,
                         size: 40,
                         color: Colors.white,
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
                 Spacer(),
                 Container(
