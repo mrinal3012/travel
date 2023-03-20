@@ -47,7 +47,7 @@ class _HivePageState extends State<HivePage> {
               ),
               SizedBox(height: 10,),
               Container(
-
+                height: 200,
                 width: 350,
                 child: TextField(
                   minLines: 2,
