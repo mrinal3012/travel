@@ -12,8 +12,7 @@ Future <void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
 
-  Box box = await Hive.openBox("counties-list");
-  box.put("name", "bangladesh");
+  Box box = await Hive.openBox("country-list");
   print(box.get("name"));
   runApp(const MyApp());
 }
