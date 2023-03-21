@@ -8,6 +8,7 @@ import 'package:travel/home/home_page.dart';
 import 'package:travel/moment/ravel_page.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive/hive.dart';
+import 'package:travel/sqflite/barchat_page.dart';
 
 Future <void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: ClippersPage(),
+      home: BarChatPage(),
     );
   }
 }
