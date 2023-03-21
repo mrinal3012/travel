@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel/Description/deccriptionmain_page.dart';
 import 'package:travel/Description/icon_page.dart';
+import 'package:travel/clippath_page.dart';
 import 'package:travel/datastorhive/hive_page.dart';
 import 'package:travel/home/appsicon_page.dart';
 import 'package:travel/home/home_page.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: HivePage(),
+      home: ClippersPage(),
     );
   }
 }
